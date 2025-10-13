@@ -14,6 +14,7 @@ symbol_count = {
     "D": 8
 }
 
+#hellooooooooooooo
 
 def get_slot_machine_spin(rows, cols, symbols):
     all_symbols = []
