@@ -33,6 +33,25 @@ def get_slot_machine_spin(rows, cols, symbols):
 
     return columns
 
+#helloooo
+def get_slot_machine_spin(rows, cols, symbols):
+    all_symbols = []
+    for symbol, count in symbols.items():
+        all_symbols.extend([symbol] * count)
+
+    columns = []
+    for _ in range(cols):
+        column = []
+        current_symbols = all_symbols[:]
+        for _ in range(rows):
+            value = random.choice(current_symbols)
+            current_symbols.remove(value)
+            column.append(value)
+
+        columns.append(column)
+
+    return columns
+
 
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
